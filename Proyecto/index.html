@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camino a Casa | Rescate independiente</title>
+  
+  <!-- Favicon Emoji Patita -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 para Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navegación Glassmorphism -->
+  <header class="navbar">
+    <a href="#inicio" class="logo">
+      <div class="logo-crop">
+        <img src="./assets/logo.png" alt="Logo Camino a Casa" class="logo-img">
+      </div>
+      <span class="logo-text">Camino a casa</span>
+    </a>
+    
+    <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Proyecto</a></li>
+        <li><a href="#animalitos">Animalitos</a></li>
+        <li><a href="#donar" class="btn-nav"><i class="fa-solid fa-heart"></i> Donar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <span class="hero-pill"><i class="fa-solid fa-house-heart"></i> Hogar de Tránsito e Iniciativa Independiente</span>
+      <h1>Cada huella merece un hogar lleno de amor</h1>
+      <p>Rescatamos, rehabilitamos y buscamos familias comprometidas para perritos y gatitos en situación de abandono.</p>
+      <div class="hero-btns">
+        <a href="#animalitos" class="btn btn-primary">Conocé a los animalitos <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#donar" class="btn btn-secondary">Quiero colaborar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Información del Proyecto -->
+  <section id="nosotros" class="section">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <span class="section-tag">Nuestra Misión</span>
+        <h2 class="section-title">Sobre el Proyecto</h2>
+        <div class="notice-badge"><i class="fa-solid fa-circle-info"></i> Aclaración importante: Somos hogar de tránsito, no un refugio.</div>
+      </div>
+      
+      <div class="grid-3">
+        <div class="card-info fade-in">
+          <div class="icon-box icon-brown">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <h3>Rescate y Cuidado</h3>
+          <p>Ofrecemos atención veterinaria, vacunación, castración y tránsito seguro temporal hasta su adopción definitiva.</p>
+        </div>
+
+        <div class="card-info fade-in delay-1">
+          <div class="icon-box icon-amber">
+            <i class="fa-solid fa-house-chimney-window"></i>
+          </div>
+          <h3>Adopción Responsable</h3>
+          <p>Entrevistamos y acompañamos a las familias para asegurar un proceso transparente y lleno de empatía.</p>
+        </div>
+
+        <div class="card-info fade-in delay-2">
+          <div class="icon-box icon-cream">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3>Concientización</h3>
+          <p>Promovemos la tenencia responsable y la castración como la única vía para frenar la superpoblación animal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería de Animalitos -->
+  <section id="animalitos" class="section section-alt">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <span class="section-tag">Adopciones</span>
+        <h2 class="section-title">Animalitos Esperando un Hogar</h2>
+        <p class="section-subtitle">Filtrá entre perros y gatos para conocer a tu compañero de vida ideal.</p>
+      </div>
+
+      <!-- Filtros Activos -->
+      <div class="filter-buttons fade-in">
+        <button class="filter-btn active" onclick="filtrarCategoria('todos', event)">Todos 🐾</button>
+        <button class="filter-btn" onclick="filtrarCategoria('perros', event)">Perros 🐶</button>
+        <button class="filter-btn" onclick="filtrarCategoria('gatos', event)">Gatos 🐱</button>
+      </div>
+
+      <div class="grid-3" id="pet-grid">
+        <!-- Perro 1 -->
+        <div class="card-pet fade-in" data-category="perros">
+          <div class="card-pet-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=800" alt="Milo">
+            <span class="badge badge-dog"><i class="fa-solid fa-dog"></i> Perro</span>
+            <span class="pet-status-pill">Listo para Adopción</span>
+          </div>
+          <div class="card-pet-body">
+            <h3>Milo</h3>
+            <div class="pet-meta">
+              <span><i class="fa-regular fa-clock"></i> 2 años</span>
+              <span><i class="fa-solid fa-ruler-vertical"></i> Mediano</span>
+            </div>
+            <div class="pet-health-tags">
+              <span><i class="fa-solid fa-check"></i> Vacunado</span>
+              <span><i class="fa-solid fa-check"></i> Castrado</span>
+              <span><i class="fa-solid fa-check"></i> Sociable</span>
+            </div>
+            <p class="pet-desc">Es muy juguetón, sociable con otros animales y le encanta pasear al aire libre.</p>
+            <button class="btn btn-outline" onclick="abrirModal('Milo', 'Perro', 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=800')">
+              Quiero Adoptar <i class="fa-solid fa-heart"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Gato 1 -->
+        <div class="card-pet fade-in delay-1" data-category="gatos">
+          <div class="card-pet-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=800" alt="Luna">
+            <span class="badge badge-cat"><i class="fa-solid fa-cat"></i> Gato</span>
+            <span class="pet-status-pill status-urgent">Urge Tránsito</span>
+          </div>
+          <div class="card-pet-body">
+            <h3>Luna</h3>
+            <div class="pet-meta">
+              <span><i class="fa-regular fa-clock"></i> 1 año</span>
+              <span><i class="fa-solid fa-ruler-vertical"></i> Pequeño</span>
+            </div>
+            <div class="pet-health-tags">
+              <span><i class="fa-solid fa-check"></i> Desparasitada</span>
+              <span><i class="fa-solid fa-check"></i> Castrada</span>
+            </div>
+            <p class="pet-desc">Tranquila, mimosa y perfecta para departamentos o ambientes serenos.</p>
+            <button class="btn btn-outline" onclick="abrirModal('Luna', 'Gata', 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=800')">
+              Quiero Adoptar <i class="fa-solid fa-heart"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Perro 2 -->
+        <div class="card-pet fade-in delay-2" data-category="perros">
+          <div class="card-pet-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=800" alt="Rocco">
+            <span class="badge badge-dog"><i class="fa-solid fa-dog"></i> Perro</span>
+            <span class="pet-status-pill">Listo para Adopción</span>
+          </div>
+          <div class="card-pet-body">
+            <h3>Rocco</h3>
+            <div class="pet-meta">
+              <span><i class="fa-regular fa-clock"></i> 4 años</span>
+              <span><i class="fa-solid fa-ruler-vertical"></i> Grande</span>
+            </div>
+            <div class="pet-health-tags">
+              <span><i class="fa-solid fa-check"></i> Vacunado</span>
+              <span><i class="fa-solid fa-check"></i> Castrado</span>
+            </div>
+            <p class="pet-desc">Un grandulón cariñoso que ama estar acompañado, jugar con pelotas y dormir siestas.</p>
+            <button class="btn btn-outline" onclick="abrirModal('Rocco', 'Perro', 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=800')">
+              Quiero Adoptar <i class="fa-solid fa-heart"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Gato 2 -->
+        <div class="card-pet fade-in" data-category="gatos">
+          <div class="card-pet-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&q=80&w=800" alt="Oliver">
+            <span class="badge badge-cat"><i class="fa-solid fa-cat"></i> Gato</span>
+            <span class="pet-status-pill">Listo para Adopción</span>
+          </div>
+          <div class="card-pet-body">
+            <h3>Oliver</h3>
+            <div class="pet-meta">
+              <span><i class="fa-regular fa-clock"></i> 6 meses</span>
+              <span><i class="fa-solid fa-ruler-vertical"></i> Pequeño</span>
+            </div>
+            <div class="pet-health-tags">
+              <span><i class="fa-solid fa-check"></i> Desparasitado</span>
+              <span><i class="fa-solid fa-check"></i> Juguetón</span>
+            </div>
+            <p class="pet-desc">Un gatito curioso e independiente al que le fascinan los juguetes con plumas.</p>
+            <button class="btn btn-outline" onclick="abrirModal('Oliver', 'Gato', 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&q=80&w=800')">
+              Quiero Adoptar <i class="fa-solid fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Donaciones -->
+  <section id="donar" class="section">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <span class="section-tag">Colaborá</span>
+        <h2 class="section-title">Ayudanos a Seguir Salvando Vidas</h2>
+        <p class="section-subtitle">No recibimos subsidios. Cada contribución va 100% a alimento, veterinaria e insumos.</p>
+      </div>
+
+      <div class="donate-box">
+        <!-- Donación Virtual (Personal Pay) -->
+        <div class="donate-method card-highlight fade-in">
+          <div class="icon-box icon-brown">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <h3>Donación Digital</h3>
+          <p class="donate-info-text">Podés colaborar por <strong>Personal Pay</strong> o Transferencia Bancaria:</p>
+
+          <div class="copy-field">
+            <span class="field-label">ALIAS</span>
+            <code id="alias-code">Caminoacasa.ok</code>
+            <button class="btn-copy" onclick="copiarTexto('alias-code', 'ALIAS')">
+              <i class="fa-regular fa-copy"></i> Copiar
+            </button>
+          </div>
+
+          <div class="copy-field">
+            <span class="field-label">CBU</span>
+            <code id="cbu-code">0000076500000013575700</code>
+            <button class="btn-copy" onclick="copiarTexto('cbu-code', 'CBU')">
+              <i class="fa-regular fa-copy"></i> Copiar
+            </button>
+          </div>
+        </div>
+
+        <!-- Presencial en Veterinarias -->
+        <div class="donate-method card-highlight fade-in delay-1">
+          <div class="icon-box icon-amber">
+            <i class="fa-solid fa-clinic-medical"></i>
+          </div>
+          <h3>Donación Presencial</h3>
+          <p class="donate-info-text">Podés dejar tu aporte en las veterinarias asociadas a nombre de <strong>Abi - Camino a casa</strong>:</p>
+
+          <ul class="vets-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Veterinaria Namibia</strong>
+                <p>Av. Alberdi 188</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Veterinaria Sumarán</strong>
+                <p>Las Heras 442</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Donaciones Físicas -->
+        <div class="donate-method card-highlight fade-in delay-2 full-width-card">
+          <div class="icon-box icon-cream">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <h3>Donación de Insumos</h3>
+          <p class="donate-info-text">Aceptamos los siguientes insumos en buen estado:</p>
+
+          <div class="insumos-grid">
+            <ul class="donation-list">
+              <li><i class="fa-solid fa-circle-check"></i> Antiparasitarios (Internos / Externos)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Alimento balanceado (Perros y Gatos)</li>
+            <ul class="donation-list">
+              <li><i class="fa-solid fa-circle-check"></i> Rascadores, camitas y areneros</li>
+              <li><i class="fa-solid fa-circle-check"></i> Collares, correas y pretales</li>
+            </ul>
+          </div>
+
+          <a href="https://www.instagram.com/caminoacasa.ok/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary border-secondary w-100 mt-auto">
+            <i class="fa-brands fa-instagram"></i> Coordinar Entrega de Insumos por IG
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Adopción -->
+  <div id="modal-adopcion" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="cerrarModal()">&times;</button>
+      <div class="modal-body">
+        <div class="modal-img-container">
+          <img id="modal-img" src="" alt="Mascota">
+        </div>
+        <h3 id="modal-titulo">Adoptar a Mascota</h3>
+        <p id="modal-texto">Escribinos a nuestro Instagram indicando el nombre para comenzar con la entrevista de adopción.</p>
+        <a id="modal-link-ig" href="https://www.instagram.com/caminoacasa.ok/" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-100">
+          <i class="fa-brands fa-instagram"></i> Ir a Instagram a Consultar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón Flotante de Instagram -->
+  <a href="https://www.instagram.com/caminoacasa.ok/" target="_blank" rel="noopener noreferrer" class="floating-btn" aria-label="Contactar por Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-crop">
+            <img src="./assets/logo.png" alt="Logo Camino a Casa" class="footer-logo-img">
+          </div>
+          <span class="logo-text">Camino a casa</span>
+          <p>Hogar de tránsito e iniciativa independiente de rescate animal.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-love">Hecho con <i class="fa-solid fa-heart"></i> para los animales.</p>
+        <p class="footer-credits">Programado por <a href="https://github.com/ESatDev" target="_blank" rel="noopener noreferrer">ESatDev</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
